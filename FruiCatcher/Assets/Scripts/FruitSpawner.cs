@@ -1,20 +1,24 @@
+using System.Collections.Generic;
 using UnityEngine;
-
+/// <summary>
+/// Spawns a fruit utilizing a plane and list of fruit data.
+/// </summary>
 public class FruitSpawner : MonoBehaviour
 {
-    [Header("Spawn Settings")]
-    [SerializeField] private GameObject objectToSpawn;
+    [SerializeField] private List<FruitData> fruitTypes = new List<FruitData>();
     [SerializeField] private float spawnInterval = 1f;
-    [SerializeField] private float dificultyIncreaseTime = 5f;
-    [SerializeField] private float spawnIntervalToRemoveEachDificultyIncrease = 0.2f;
-
-    [Header("Spawn Area")]
+    [SerializeField] private float difficultyIncreaseTime = 5f;
+    [SerializeField] private float spawnIntervalToRemoveEachDifficultyIncrease = 0.1f;
+    [SerializeField] private float spawnIntervalHardCap = 1.5f;
+    [SerializeField] private float minSpawnInterval = 0.2f;
     [SerializeField] private Transform spawnArea;
 
     private float timer;
+    private float timerTick;
 
-    private float timerTick = 0f;
-
+    /// <summary>
+    /// Spawn fruit timer and difficulty increase.
+    /// </summary>
     private void Update()
     {
         timer += Time.deltaTime;
@@ -26,23 +30,57 @@ public class FruitSpawner : MonoBehaviour
             SpawnObject();
         }
 
-        if (timerTick >= dificultyIncreaseTime)
+        if (timerTick >= difficultyIncreaseTime)
         {
-            spawnInterval -= spawnIntervalToRemoveEachDificultyIncrease;
+            spawnInterval = Mathf.Max(minSpawnInterval, spawnInterval - spawnIntervalToRemoveEachDifficultyIncrease);
             timerTick = 0f;
         }
+        if (difficultyIncreaseTime < spawnIntervalHardCap)
+        {
+            difficultyIncreaseTime = spawnIntervalHardCap;
+        }
     }
-
+    /// <summary>
+    /// Spawns the fruit in a random position.
+    /// </summary>
     private void SpawnObject()
     {
-        Vector3 spawnPosition = GetRandomPointOnPlane();
-        Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
-    }
+        FruitData chosen = PickWeightedFruit();
+        if (chosen == null || chosen.prefab == null) return;
 
+        Vector3 spawnPosition = GetRandomPointOnPlane();
+        GameObject spawned = Instantiate(chosen.prefab, spawnPosition, chosen.prefab.transform.rotation);
+
+        Fruit fruit = spawned.GetComponent<Fruit>();
+        if (fruit != null)
+            fruit.data = chosen;
+    }
+    /// <summary>
+    /// Picks a fruit from the list of data.
+    /// </summary>
+    private FruitData PickWeightedFruit()
+    {
+        float total = 0f;
+        foreach (FruitData f in fruitTypes)
+            if (f != null) total += f.spawnWeight;
+
+        if (total <= 0f) return null;
+
+        float roll = Random.Range(0f, total);
+        float cumulative = 0f;
+        foreach (FruitData f in fruitTypes)
+        {
+            if (f == null) continue;
+            cumulative += f.spawnWeight;
+            if (roll <= cumulative) return f;
+        }
+        return fruitTypes[fruitTypes.Count - 1];
+    }
+    /// <summary>
+    /// Random place selector for the fruit to spawn.
+    /// </summary>
     private Vector3 GetRandomPointOnPlane()
     {
-        // Unity default Plane is 10x10 units at scale 1
-        // so half-extent is 5 * localScale
         float width = spawnArea.localScale.x * 5f;
         float length = spawnArea.localScale.z * 5f;
 
