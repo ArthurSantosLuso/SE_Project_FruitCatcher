@@ -35,6 +35,8 @@
 .vs/
 .vscode/
 .vsconfig
+.slnx
+.sln
 
 # Gradle cache directory
 .gradle/
