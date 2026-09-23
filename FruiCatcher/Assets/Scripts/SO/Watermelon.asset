@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46aac66d6ad2ae145a521c9b7507640f, type: 3}
-  m_Name: Apple
+  m_Name: Watermelon
   m_EditorClassIdentifier: Assembly-CSharp::FruitData
-  prefab: {fileID: 0}
-  pointValue: 1
+  prefab: {fileID: 6231259855749547633, guid: 01e422a3b9486ee46a00197b30353172, type: 3}
+  pointValue: 6
   spawnWeight: 1
