@@ -89,5 +89,8 @@ public class FruitSpawner : MonoBehaviour
 
         Vector3 offset = new Vector3(randomX, 0f, randomZ);
         return spawnArea.position + offset;
+
+        // I never gonna treat you like i should
+        // 4:44
     }
 }
