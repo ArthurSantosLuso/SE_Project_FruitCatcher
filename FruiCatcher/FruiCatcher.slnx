@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<Solution>
-  <Project Path="Assembly-CSharp.csproj" />
-  <Project Path="Assembly-CSharp-Editor.csproj" />
-</Solution>
-=======
 ﻿<Solution>
+  <Project Path="Scripts.csproj" />
   <Project Path="Assembly-CSharp.csproj" />
   <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="ViconPluginUtils.csproj" />
 </Solution>
->>>>>>> db65f9509a594c783ee8be8d68fcd63c271bdb89

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2564234017791137238}
   - component: {fileID: -5480693713215044168}
   - component: {fileID: -842417341097145357}
+  - component: {fileID: 2245560101182135833}
   m_Layer: 0
   m_Name: lowpoly_watermelon
   m_TagString: Untagged
@@ -134,9 +135,22 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 0.43962994, y: 1.7266071, z: 1.7575178}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2245560101182135833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6231259855749547633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f06e06aaca462734f8758ca7a3234950, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Fruit
+  data: {fileID: 11400000, guid: 70d17bd30f4259d4a9af731d6b81d603, type: 2}

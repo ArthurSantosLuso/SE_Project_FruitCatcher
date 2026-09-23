@@ -8,4 +8,9 @@ public class Fruit : MonoBehaviour
     {
         return data != null ? data.pointValue : 0;
     }
+
+    private void Start()
+    {
+        Destroy(gameObject, 4);
+    }
 }

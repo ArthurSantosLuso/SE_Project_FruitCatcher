@@ -25,6 +25,7 @@ public class ScoreManager : MonoBehaviour
     {
         score += amount;
         OnScoreChanged?.Invoke(score);
+        Debug.Log(score);
     }
 
     public void ResetScore()
