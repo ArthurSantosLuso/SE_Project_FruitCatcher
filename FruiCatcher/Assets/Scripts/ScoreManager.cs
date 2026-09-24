@@ -21,6 +21,12 @@ public class ScoreManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        OVRManager.instance.usePositionTracking = false/*disablePositionTracking = true*/;
+        /*OVRManager.instance.useRotationTracking = false *//*disablePositionTracking = true*/;
+    }
+
     public void AddPoints(int amount)
     {
         score += amount;
