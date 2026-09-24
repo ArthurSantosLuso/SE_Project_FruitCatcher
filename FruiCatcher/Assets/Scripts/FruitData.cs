@@ -6,4 +6,6 @@ public class FruitData : ScriptableObject
     public GameObject prefab;
     public int pointValue = 1;
     public float spawnWeight = 1f;
+    public AudioClip splashSound;
+    public AudioClip caughtSound;
 }

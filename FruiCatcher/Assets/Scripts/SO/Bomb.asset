@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 46aac66d6ad2ae145a521c9b7507640f, type: 3}
-  m_Name: Strawberry
+  m_Name: Bomb
   m_EditorClassIdentifier: Assembly-CSharp::FruitData
-  prefab: {fileID: 587914991303806409, guid: 9f97c96f2df4bc64dbe64ddb2bf2697b, type: 3}
-  pointValue: 5
-  spawnWeight: 8
-  splashSound: {fileID: 8300000, guid: 18711bda9df173b4999a57e77386f8c0, type: 3}
-  caughtSound: {fileID: 0}
+  prefab: {fileID: 9037178096770538985, guid: 296c663903e6cc84c9b8130747a88b4c, type: 3}
+  pointValue: 0
+  spawnWeight: 3
+  splashSound: {fileID: 8300000, guid: 8e48a0602ee6f814db568faf14927265, type: 3}
+  caughtSound: {fileID: 8300000, guid: f18f9cf238b6dcd4cbe40d2b3719d96b, type: 3}

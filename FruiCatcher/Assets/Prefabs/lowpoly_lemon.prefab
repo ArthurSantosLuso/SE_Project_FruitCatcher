@@ -115,7 +115,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
@@ -139,8 +139,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.0217527, y: 1.7030047, z: 1.4863462}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.22101021, y: 0.37929317, z: 0.23176575}
+  m_Center: {x: 0.024336815, y: -0.008231536, z: 0.02507019}
 --- !u!114 &6385489243371629345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,3 +154,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
   data: {fileID: 11400000, guid: 46c74c13f2ff94447ba7c520612a4b86, type: 2}
+  speed: 0.001

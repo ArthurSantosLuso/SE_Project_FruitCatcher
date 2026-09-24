@@ -8,6 +8,7 @@ public class BasketController : MonoBehaviour
         if (fruit != null)
         {
             int points = fruit.GetPoints();
+            AudioSource.PlayClipAtPoint(fruit.GetCaughtSound(), transform.position);
             ScoreManager.Instance.AddPoints(points);
             Destroy(other.gameObject);
         }

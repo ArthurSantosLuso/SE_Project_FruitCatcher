@@ -10,6 +10,8 @@ public class ScoreManager : MonoBehaviour
     private int score;
 
     public int Score => score;
+    public bool gameLost = false;
+    [SerializeField] private AudioClip youLoseSound;
 
     private void Awake()
     {
@@ -29,6 +31,11 @@ public class ScoreManager : MonoBehaviour
 
     public void AddPoints(int amount)
     {
+        if (amount == 0)
+        {
+            gameLost = true;
+            AudioSource.PlayClipAtPoint(youLoseSound, transform.position);
+        }
         score += amount;
         OnScoreChanged?.Invoke(score);
         Debug.Log(score);

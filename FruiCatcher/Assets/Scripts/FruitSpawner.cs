@@ -12,6 +12,7 @@ public class FruitSpawner : MonoBehaviour
     [SerializeField] private float spawnIntervalHardCap = 1.5f;
     [SerializeField] private float minSpawnInterval = 0.2f;
     [SerializeField] private Transform spawnArea;
+    [SerializeField] private ScoreManager scoreManager;
 
     private float timer;
     private float timerTick;
@@ -21,8 +22,11 @@ public class FruitSpawner : MonoBehaviour
     /// </summary>
     private void Update()
     {
-        timer += Time.deltaTime;
-        timerTick += Time.deltaTime;
+        if (!scoreManager.gameLost)
+        {
+            timer += Time.deltaTime;
+            timerTick += Time.deltaTime;
+        }
 
         if (timer >= spawnInterval)
         {

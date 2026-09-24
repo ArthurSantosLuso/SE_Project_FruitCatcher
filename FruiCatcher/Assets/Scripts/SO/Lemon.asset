@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FruitData
   prefab: {fileID: 464099245066128876, guid: ecdd1e30832f4e94cb8e95e70292f382, type: 3}
   pointValue: 3
-  spawnWeight: 1
+  spawnWeight: 12
+  splashSound: {fileID: 8300000, guid: 8e48a0602ee6f814db568faf14927265, type: 3}
+  caughtSound: {fileID: 0}
