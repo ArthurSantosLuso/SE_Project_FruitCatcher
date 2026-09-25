@@ -16,4 +16,4 @@ MonoBehaviour:
   pointValue: 4
   spawnWeight: 10
   splashSound: {fileID: 8300000, guid: 18711bda9df173b4999a57e77386f8c0, type: 3}
-  caughtSound: {fileID: 0}
+  caughtSound: {fileID: 8300000, guid: 9d1f6952bba59e041868d2af9779790c, type: 3}

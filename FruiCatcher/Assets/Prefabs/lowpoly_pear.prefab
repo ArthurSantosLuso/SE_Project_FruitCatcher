@@ -139,8 +139,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.3071499, y: 0.46678874, z: 0.26776123}
-  m_Center: {x: -0.059548378, y: -0.019953117, z: 0.028469086}
+  m_Size: {x: 0.12993622, y: 0.19594714, z: 0.12678719}
+  m_Center: {x: -0.0006980896, y: -0.0011585653, z: -0.002333641}
 --- !u!114 &-8339307336594980252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,4 +154,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Fruit
   data: {fileID: 11400000, guid: 7a4a86dc7e7e5a84bb0376f2b27c84ea, type: 2}
-  speed: 0.001
+  fallSpeed: 2

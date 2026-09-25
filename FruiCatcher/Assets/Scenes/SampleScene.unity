@@ -216,6 +216,17 @@ Transform:
   - {fileID: 1398308972}
   m_Father: {fileID: 57374142}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &244687828 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6650702547066941928, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
+  m_PrefabInstance: {fileID: 2094437625}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
 --- !u!1 &264539032
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,63 +414,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 344edad2a970e9a4a9ce067c065d5d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &381191093
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 3525438630370380309, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525438630370380309, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.225
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525438630370380309, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.615
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525438630370380309, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.99939084
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525438630370380309, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525438630370380309, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525438630370380309, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.034899585
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525438630370380309, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525438630370380309, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3525438630370380309, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8292657734458530964, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
-      propertyPath: m_Name
-      value: Basket (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
 --- !u!1001 &385938770
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1533,7 +1487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f997b6579db01144c9396ddc400ca580, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ScoreUI
-  scoreText: {fileID: 0}
+  scoreText: {fileID: 244687828}
 --- !u!1 &1381038848
 GameObject:
   m_ObjectHideFlags: 0
@@ -7510,7 +7464,8 @@ PrefabInstance:
       value: Basket
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 400678924315289740, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b274e42fabb98bd40b776e0ded9b9256, type: 3}
@@ -7529,4 +7484,3 @@ SceneRoots:
   - {fileID: 1381038851}
   - {fileID: 1554206017}
   - {fileID: 1825796500}
-  - {fileID: 381191093}
